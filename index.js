@@ -408,7 +408,7 @@ function createBody(idx) {
             });
         }else{
             if (isNaN(parseFloat(entry[key])) || parseFloat(entry[key]) <= 0) {
-                error(`Invalid value for ${key}: ${entry[key]} at ${idx}`);
+                throw new Error(`Invalid value for ${key}: ${entry[key]} at ${idx}`);
             }
             body.push({
                 name: creditsUUID,
